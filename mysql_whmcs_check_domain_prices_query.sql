@@ -30,7 +30,7 @@ where mdm.domain like concat('%',dpr.extension)
     LIMIT 1
 ) 
  
- <>(mdm.firstpaymentamount+mdm.recurringamount)/2 then 'ΔΙΑΦΟΡΑ ΤΙΜΗΣ' else '' end) info
+ <>(mdm.firstpaymentamount+mdm.recurringamount)/2 then 'warning' else '' end) info
 
 
 FROM `tbldomains` mdm
